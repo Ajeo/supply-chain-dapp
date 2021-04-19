@@ -33,7 +33,7 @@ contract SupplyChain is ConsumerRole, DistributorRole, FarmerRole, RetailerRole,
     Shipped,    // 5
     Received,   // 6
     Purchased   // 7
-    }
+  }
 
   State constant defaultState = State.Harvested;
 
@@ -134,11 +134,9 @@ contract SupplyChain is ConsumerRole, DistributorRole, FarmerRole, RetailerRole,
     _;
   }
 
-  // In the constructor set 'owner' to the address that instantiated the contract
   // and set 'sku' to 1
   // and set 'upc' to 1
   constructor() public payable {
-    owner = msg.sender;
     sku = 1;
     upc = 1;
   }
